@@ -30,7 +30,7 @@ function App() {
      firstName && 
      validateEmail(email) && 
      password.value.length >= 8 && 
-     role !== "role" 
+     role !== "role"
    ); 
  }; 
  
@@ -45,16 +45,12 @@ function App() {
    setRole("role"); 
  }; 
 
- const addAccount = () => {
-    return (<div><button type="submit" value="add another account">Add Another Account</button></div>);
- }
-
 
  const handleSubmit = (e) => { 
    e.preventDefault(); 
    alert("Success"); 
+   alert("Add Another Account");
    clearForm();
-   return (<div><button type="submit" value="add another account">Add Another Account</button></div>);
  }; 
  
  return ( 
@@ -110,6 +106,7 @@ function App() {
          <button type="submit" onSubmit={!getIsFormValid()} > 
            Submit 
          </button> 
+         
         
        </fieldset> 
      </form> 

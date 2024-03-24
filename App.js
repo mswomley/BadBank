@@ -9,16 +9,17 @@ import Withdraw from "./withdraw"
 import Deposit from "./deposit"
 import AllData from "./alldata"
 import money from "./money"
+import { NavLink } from 'react-router-dom';
 
 function App () {
   return (
 <Router>
       <nav class="topnav">
-        <Link class="topnav" to="/"> Home </Link>
-        <Link class="topnav" to="/createaccount"> Create Account </Link>
-        <Link class="topnav" to="/withdraw"> Withdraw </Link>
-        <Link class="topnav" to="/deposit"> Deposit </Link>
-        <Link class="topnav" to="/alldata"> All Data </Link>
+        <NavLink class="active"  to="/"> Home </NavLink>
+        <NavLink class="active"  to="/createaccount"> Create Account </NavLink>
+        <NavLink class="active"  to="/withdraw"> Withdraw </NavLink>
+        <NavLink class="active"  to="/deposit"> Deposit </NavLink>
+        <NavLink class="active"  to="/alldata"> All Data </NavLink>
       </nav>
   <Routes>
       <Route path="/" element={<Home />} />
